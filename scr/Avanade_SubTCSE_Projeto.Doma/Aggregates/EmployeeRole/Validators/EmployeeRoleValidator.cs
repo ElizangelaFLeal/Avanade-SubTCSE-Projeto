@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
 
-namespace Avanade_SubTCSE_Projeto.Doma.Aggregates.Employee.Validators
+namespace Avanade_SubTCSE_Projeto.Doma.Aggregates.EmployeeRole.Validators
 {
     public class EmployeeRoleValidator : AbstractValidator<Entities.EmployeeRole>
     {
         public EmployeeRoleValidator()
         {
-            RuleSet("new", () => 
+            RuleSet("new", () =>
             {
                 RuleFor(e => e.RoleName)
                 .NotEmpty()

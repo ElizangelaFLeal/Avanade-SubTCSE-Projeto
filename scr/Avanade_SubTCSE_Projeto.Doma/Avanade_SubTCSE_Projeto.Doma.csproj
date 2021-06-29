@@ -6,11 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Aggregates\EmployeeRole\Interfaces\Services\" />
-    <Folder Include="Aggregates\EmployeeRole\Validators\" />
-    <Folder Include="Aggregates\EmployeeRole\Services\" />
-    <Folder Include="Aggregates\Employee\Interfaces\Repositories\" />
     <Folder Include="Aggregates\Employee\ValueObject\" />
-    <Folder Include="Avanade_SubTCSE_Projeto\Doma\Aggregates\Employee\Entities\" />
   </ItemGroup>
 
   <ItemGroup>

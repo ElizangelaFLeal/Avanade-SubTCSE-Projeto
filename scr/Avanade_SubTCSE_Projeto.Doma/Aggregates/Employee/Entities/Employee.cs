@@ -4,11 +4,12 @@ namespace Avanade_SubTCSE_Projeto.Doma.Aggregates.Employee.Entities
 {
     public record Employee : BaseEntity<string>
     {
-        public Employee(string firstName, 
-            string surName, 
-            DateTime birthday, 
-            bool active, 
-            decimal salary, 
+        public Employee(
+            string firstName,
+            string surName,
+            DateTime birthday,
+            bool active,
+            decimal salary,
             EmployeeRole.Entities.EmployeeRole employeeRole)
         {
             FirstName = firstName;
@@ -26,9 +27,9 @@ namespace Avanade_SubTCSE_Projeto.Doma.Aggregates.Employee.Entities
         public DateTime Birthday { get; init; }
 
         public bool Active { get; init; }
+
         public decimal Salary { get; init; }
 
         public EmployeeRole.Entities.EmployeeRole EmployeeRole { get; init; }
-
     }
 }
