@@ -5,8 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Aggregates\Employee\ValueObject\**" />
+    <EmbeddedResource Remove="Aggregates\Employee\ValueObject\**" />
+    <None Remove="Aggregates\Employee\ValueObject\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Aggregates\EmployeeRole\Interfaces\Services\" />
-    <Folder Include="Aggregates\Employee\ValueObject\" />
   </ItemGroup>
 
   <ItemGroup>
