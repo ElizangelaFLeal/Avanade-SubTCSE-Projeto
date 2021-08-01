@@ -4,7 +4,7 @@ namespace Avanade.SubTCSE.Projeto.Domain.Base.Repository.MongoDB
 {
     public interface IMongoDBContext
     {
-        IMongoCollection<TEntity> GetCollection<TEntity(string colletion);
+        IMongoCollection<TEntity> GetCollection<TEntity>(string colletion);
 
     }
 }

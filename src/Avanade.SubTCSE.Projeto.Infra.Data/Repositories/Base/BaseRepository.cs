@@ -10,7 +10,7 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base
     {
         private readonly IMongoCollection<TEntity> _collection;
 
-        public virtual async Task<TEntity> Add(TEntity entity)
+        public virtual async Task<TEntity> AddAsync(TEntity entity)
         {
             await _collection.InsertOneAsync(entity);
 
