@@ -1,0 +1,9 @@
+ã
+ÅC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\Controllers\EmployeeRoleController.csutf-8é
+ÑC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\Controllers\WeatherForecastController.csutf-8o
+fC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\Program.csutf-8o
+fC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\Startup.csutf-8w
+nC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\WeatherForecast.csutf-8ß
+õC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.csutf-8§
+òC:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\obj\Debug\net5.0\Avanade.SubTCSE.Projeto.Api.AssemblyInfo.csutf-8∑
+´C:\Projetos\Avanade-SubTCSE-Projeto\Avanade-SubTCSE-Projeto\src\Avanade.SubTCSE.Projeto.Api\obj\Debug\net5.0\Avanade.SubTCSE.Projeto.Api.MvcApplicationPartsAssemblyInfo.csutf-8

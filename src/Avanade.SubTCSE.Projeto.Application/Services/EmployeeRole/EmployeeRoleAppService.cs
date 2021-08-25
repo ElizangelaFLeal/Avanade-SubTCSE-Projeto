@@ -12,13 +12,19 @@ namespace Avanade.SubTCSE.Projeto.Application.Services.EmployeeRole
 
         private readonly IEmployeeRoleService _employeeRoleService;
 
+        public EmployeeRoleAppService(IMapper mapper, IEmployeeRoleService employeeRoleService)
+        {
+            _mapper = mapper;
+            _employeeRoleService = employeeRoleService;
+        }
+
         public async Task<EmployeeRoleDto> AddEmployeeRoleAsync(EmployeeRoleDto employeeRoleDto)
         {
             //Mapear
             var itemDomain = _mapper.Map<EmployeeRoleDto, Domain.Aggregates.EmployeeRole.Entities.EmployeeRole>(employeeRoleDto);
 
             //Chamar método
-            var item = await _employeeRoleService.AddEmployeeRoleAsync(itemDomain);
+            var item = await _employeeRoleService.AddEmployeeRoleAsync (itemDomain);
 
             //Mapear
             var itemDto = _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto> (item);
