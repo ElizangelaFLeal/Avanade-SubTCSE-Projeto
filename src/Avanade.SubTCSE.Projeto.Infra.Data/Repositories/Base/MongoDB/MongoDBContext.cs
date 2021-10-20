@@ -10,7 +10,7 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base.MongoDB
         public MongoDBContext()
         {
             MongoClientSettings mongoClientSettings = MongoClientSettings
-                .FromUrl(new MongoUrl("mongodb://127.0.0.1:27017"));
+                .FromUrl(new MongoUrl("mongodb://root:avanade-password@127.0.0.1:27017/admin?authSource=admin"));
 
             mongoClientSettings.SslSettings =
                 new SslSettings()
@@ -25,9 +25,7 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base.MongoDB
 
         public IMongoCollection<TEntity> GetCollection<TEntity>(string collection)
         {
-            throw new System.NotImplementedException();
             return _mongoDatabase.GetCollection<TEntity>(name: collection);
         }
     }
 }
-

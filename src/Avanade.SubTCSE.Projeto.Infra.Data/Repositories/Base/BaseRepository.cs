@@ -1,7 +1,9 @@
 ﻿using Avanade.SubTCSE.Projeto.Domain.Aggregates;
 using Avanade.SubTCSE.Projeto.Domain.Base.Repository;
 using Avanade.SubTCSE.Projeto.Domain.Base.Repository.MongoDB;
+using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base
@@ -16,7 +18,6 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base
             _collection = mongoDBContext.GetCollection<TEntity>(collectioName);
         }
 
-
         public virtual async Task<TEntity> AddAsync(TEntity entity)
         {
             await _collection.InsertOneAsync(entity);
@@ -24,9 +25,20 @@ namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base
             return entity;
         }
 
-        public async Task<TEntity> FindById(Tid Id)
+        public async Task<List<TEntity>> FindAllAsync()
         {
-            throw new System.NotImplementedException();
+            var all = await _collection.FindAsync(new BsonDocument());
+
+            return await all.ToListAsync();
+        }
+
+        public async Task<TEntity> FindByIdAsync(Tid Id)
+        {
+            var filter = Builders<TEntity>.Filter.Eq("_id", Id);
+
+            var resultado = await _collection.FindAsync(filter);
+
+            return resultado.FirstOrDefault();
         }
     }
 }

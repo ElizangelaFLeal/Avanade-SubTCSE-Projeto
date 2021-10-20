@@ -39,14 +39,14 @@ namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.EmployeeRole.Services
             return employeeRole;
         }
 
-        //public async Task<List<Entities.EmployeeRole>> GetAllAsync()
-        //{
-        //    return await _employeeRoleRepository.FindAllAsync();
-        //}
+        public async Task<List<Entities.EmployeeRole>> GetAllAsync()
+        {
+            return await _employeeRoleRepository.FindAllAsync();
+        }
 
-        //public async Task<Entities.EmployeeRole> GetById(string Id)
-        //{
-        //    return await _employeeRoleRepository.FindByIdAsync(Id);
-        //}
+        public async Task<Entities.EmployeeRole> GetById(string Id)
+        {
+            return await _employeeRoleRepository.FindByIdAsync(Id);
+        }
     }
 }

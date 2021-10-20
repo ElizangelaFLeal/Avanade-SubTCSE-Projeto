@@ -1,5 +1,5 @@
 ﻿using Avanade.SubTCSE.Projeto.Apli.AutoMapperConfigs.Profiles.Employee;
-using Avanade.SubTCSE.Projeto.Apli.AutoMapperConfigs.Profiles.EmployeeRole;
+using Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles.EmployeeRole;
 
 namespace Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles
 {
@@ -14,5 +14,5 @@ namespace Avanade.SubTCSE.Projeto.Application.AutoMapperConfigs.Profiles
 
                 cfg.AddProfile<EmployeeProfile>();
             });
-    } 
+    }
 }

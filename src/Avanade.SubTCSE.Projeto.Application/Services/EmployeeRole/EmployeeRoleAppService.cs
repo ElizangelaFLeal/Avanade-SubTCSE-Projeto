@@ -2,6 +2,8 @@
 using Avanade.SubTCSE.Projeto.Application.Dtos.EmployeeRole;
 using Avanade.SubTCSE.Projeto.Application.Interfaces.EmployeeRole;
 using Avanade.SubTCSE.Projeto.Domain.Aggregates.EmployeeRole.Interfaces.Services;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Avanade.SubTCSE.Projeto.Application.Services.EmployeeRole
@@ -20,18 +22,31 @@ namespace Avanade.SubTCSE.Projeto.Application.Services.EmployeeRole
 
         public async Task<EmployeeRoleDto> AddEmployeeRoleAsync(EmployeeRoleDto employeeRoleDto)
         {
-            //Mapear
+            //mapear
             var itemDomain = _mapper.Map<EmployeeRoleDto, Domain.Aggregates.EmployeeRole.Entities.EmployeeRole>(employeeRoleDto);
 
-            //Chamar método
-            var item = await _employeeRoleService.AddEmployeeRoleAsync (itemDomain);
+            //chamar metodo
+            var item = await _employeeRoleService.AddEmployeeRoleAsync(itemDomain);
 
-            //Mapear
-            var itemDto = _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto> (item);
+            //mapear
+            var itemDto = _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto>(item);
 
-            //Devolver
+            //devolver
             return itemDto;
+        }
 
+        public async Task<List<EmployeeRoleDto>> FindAllEmployeeRoleAsync()
+        {
+            var item = await _employeeRoleService.GetAllAsync();
+
+            return _mapper.Map<List<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole>, List<EmployeeRoleDto>>(item);
+        }
+
+        public async Task<EmployeeRoleDto> GetById(string id)
+        {
+            var item = await _employeeRoleService.GetById(id);
+
+            return _mapper.Map<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, EmployeeRoleDto>(item);
         }
     }
 }
